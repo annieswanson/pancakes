@@ -72,7 +72,12 @@
       height: 300px;     /* Fixed height for our scattered layout demo */
       margin: 50px auto; /* Center horizontally */
       overflow: hidden;  /* Ensure no horizontal scrollbar, hides any overflow */
+     
     }
+
+    .photo-collage a {
+  display: inline-block;
+}
 
     /* Common styling for all images */
     .photo-collage img {
@@ -224,14 +229,13 @@
       <div class="spacer"></div>
       <p style="font-size:16px";>WIREFRAMES</p>
       <p><div class="photo-collage">
-        <!-- Replace each src with your actual image paths -->
-        <img src="wf1.png" alt="wf1" class="img1">
-        <img src="wf2.png" alt="wf2" class="img2">
-        <img src="wf6.png" alt="wf6" class="img3">
-        <img src="wf8.png" alt="wf8" class="img4">
-        <img src="wf9.png" alt="wf9" class="img5">
-        <img src="wf10.png" alt="wf10" class="img6">
-        <img src="wf11.png" alt="wf11" class="img7">
+        <a href="wf1.png" target="_blank" rel="noopener noreferrer"><img src="wf1.png" alt="wf1" class="img1"></a>
+        <a href="wf2.png" target="_blank" rel="noopener noreferrer"><img src="wf2.png" alt="wf2" class="img2"></a>
+        <a href="wf6.png" target="_blank" rel="noopener noreferrer"><img src="wf6.png" alt="wf6" class="img3"></a>
+        <a href="wf8.png" target="_blank" rel="noopener noreferrer"><img src="wf8.png" alt="wf8" class="img4"></a>
+        <a href="wf9.png" target="_blank" rel="noopener noreferrer"><img src="wf9.png" alt="wf9" class="img5"></a>
+        <a href="wf10.png" target="_blank" rel="noopener noreferrer"><img src="wf10.png" alt="wf10" class="img6"></a>
+        <a href="wf11.png" target="_blank" rel="noopener noreferrer"><img src="wf11.png" alt="wf11" class="img7"></a>
       </div></p>
       
       <div class="spacer"></div>
@@ -402,7 +406,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 3) Scrolled to bottom logic
   function isScrolledToBottom(el) {
-    return el.scrollTop + el.clientHeight >= el.scrollHeight;
+    return el.scrollTop + el.clientHeight >= el.scrollHeight - 0.5;
   }
 
   let leftAtBottom = false;
